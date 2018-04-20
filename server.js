@@ -1,6 +1,6 @@
 var express = require('express');
 var hbs = require('hbs');
-
+const port = process.env.PORT || 3000;
 //create a app variable for express
 var app = express();
 //set up the view engine
@@ -36,4 +36,6 @@ app.get('/bad',(req, resp)=>{
     })
 })
 
-app.listen(3000);
+app.listen(port, function(){
+    console.log(`Server is listening on ${port}`)
+});
