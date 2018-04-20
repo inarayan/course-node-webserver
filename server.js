@@ -31,6 +31,13 @@ app.get('/about', (req, res) => {
     });
 })
 
+app.get('/projects', (req, resp) => {
+    resp.render('project.hbs',{
+        Name : " Node First Project",
+        Purpose : " This is the baby step in learning"
+    })
+})
+
 app.get('/bad',(req, resp)=>{
     resp.send({
         Error: " This request has a problem"
