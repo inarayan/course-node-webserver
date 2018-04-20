@@ -13,9 +13,10 @@ hbs.registerHelper("screamit", (text)=>{
     return text;
 })
 
-app.use((req, resp, next) => {
+/*app.use((req, resp, next) => {
     resp.render('maintenance.hbs');
-})
+})*/
+
 app.get('/', (req, resp)=>{
     //resp.send('Hey this is the first express App');
     resp.render('home.hbs',{
